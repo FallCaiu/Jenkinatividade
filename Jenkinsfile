@@ -1,10 +1,12 @@
 pipeline {
-    agent any
+    agent nome
 
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello teche it is my Mario'
+    stages  ('Build'){
+        agent{
+            docker { image 'maven' }
+        }
+           steps {
+                echo "mvn package -Dmave.test.skip=true"
             }
         }
     }
