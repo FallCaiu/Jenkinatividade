@@ -1,20 +1,17 @@
 pipeline {
-    agent nome
-
-    stages  ('Build'){
-        agent{
-            docker { image 'maven' }
-        }
-           steps {
-                echo "mvn package -Dmave.test.skip=true"
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                // Coloque os passos de construção aqui
+                echo 'Construindo...'
             }
         }
-    stage('Test'){
-        agent{
-            docker {image 'maven'}
-        }
-        steps{
-            echo "mvn clean install"
+        stage('Test') {
+            steps {
+                // Coloque os passos de teste aqui
+                echo 'Testando...'
+            }
         }
     }
 }
