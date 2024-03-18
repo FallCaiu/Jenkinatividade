@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Coloque os passos de teste aqui
-                echo 'Testando.3.2.3'
+                echo 'Testando.1.1.1'
             }
         }
     }
