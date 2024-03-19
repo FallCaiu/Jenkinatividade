@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Coloque os passos de teste aqui
-                echo 'Apresentação em video'
+                echo 'Apresentação de video 2ª tentativa'
             }
         }
     }
